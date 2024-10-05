@@ -1,19 +1,12 @@
-# cc-api
-Chess Coordinator API
+# Chess Coordinator API
 
 ## Setup
 
-### Linux
+### macOS / Linux / Windows (WSL)
 
 Run `setup.sh` to create python virtual environment and install dependencies from `requirements.txt`
 
-### Windows
-
-> TDB
-
 ## Run
-
-### Linux
 
 To start a dev server via `uvicorn` run `make dev` from `chess_coordinator` directory.
 
