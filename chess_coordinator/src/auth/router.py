@@ -6,11 +6,13 @@ auth_router = APIRouter()
 @auth_router.post("/auth/login", tags=["auth"])
 def login():
     """
-    @brief Login to the system
+    Login to the system
 
-    @param .... TODO
+    Args:
+        -- TODO --
 
-    @return 200 on success
+    Returns:
+        dict: 200 on success
     """
     return {"auth": "login"}
 
@@ -18,11 +20,13 @@ def login():
 @auth_router.post("/auth/register", tags=["auth"])
 def register():
     """
-    @brief Register new user in the system
+    Register new user in the system
 
-    @param .... TODO
+    Args:
+        -- TODO--
 
-    @return 200 on success
+    Returns:
+        dict: 200 on success
     """
     return {"auth": "register"}
 
@@ -30,10 +34,12 @@ def register():
 @auth_router.post("/auth/logout", tags=["auth"])
 def logout():
     """
-    @brief Logout from the system
+    Logout from the system
 
-    @param user_id The ID of the user
+    Args:
+        user_id (int): The ID of the user
 
-    @return 200 on success
+    Returns:
+        dict: 200 on success
     """
     return {"auth": "logout"}

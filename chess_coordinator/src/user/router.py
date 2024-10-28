@@ -4,62 +4,60 @@ user_router = APIRouter()
 
 
 @user_router.get("/user/profile", tags=["users"])
-def read_user_profile():
+def get_user_profile():
     """
-    @brief Detailed view of a particular user
+    Detailed view of a particular user.
 
-    @return An object that contains all information about a user:
+    Returns:
+        dict: An object that contains all information about a user:
             - Name of the user
             - Email of the user
     """
-    return {"user": "user profile"}
-
-
-@user_router.get("/user/settings", tags=["users"])
-def read_user_settings():
-    """
-    @brief Detailed view of a particular user's current settings
-
-    @return An object that contains all information about a user's current settings
-    """
-    return {"user": "user settings"}
+    return {"user_id": 42, "name": "Magnus Carlsen", "email": "mcarlsen@example.com"}
 
 
 @user_router.patch("/user/settings/update/name", tags=["users"])
 def update_user_name():
     """
-    @brief Update the name of a user
+    Update the name of a user.
 
-    @return 200 on success
+    Returns:
+        status (int): 200 on success.
+        message (str): A message indicating the success/error of the operation.
     """
-    return {"user": "update name"}
+    return {"status": 200, "message": "Name updated successfully"}
 
 
 @user_router.patch("/user/settings/update/email", tags=["users"])
 def update_user_email():
     """
-    @brief Update the email of a user
+    Update the email of a user.
 
-    @return 200 on success
+    Returns:
+        status (int): 200 on success.
+        message (str): A message indicating the success/error of the operation.
     """
-    return {"user": "update email"}
+    return {"status": 200, "message": "Email updated successfully"}
 
 
 @user_router.patch("/user/settings/update/password", tags=["users"])
 def update_user_password():
     """
-    @brief Update the password of a user
+    Update the password of a user.
 
-    @return 200 on success
+    Returns:
+        status (int): 200 on success.
+        message (str): A message indicating the success/error of the operation.
     """
-    return {"user": "update password"}
+    return {"status": 200, "message": "Password updated successfully"}
 
 
 @user_router.get("/user/tournaments", tags=["users"])
-def read_user_tournaments():
+def get_user_tournaments():
     """
-    @brief List of all the tournaments of a user
+    List of all the tournaments of a user.
 
-    @return A list of all id's of the tournaments of a user
+    Returns:
+        tournaments (dict): A list of all IDs of the tournaments of a user.
     """
-    return {"user": "user tournaments"}
+    return {"tournaments": [1, 2, 3, 4, 5]}
